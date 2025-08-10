@@ -18,7 +18,7 @@ if "memory" not in st.session_state:
 memory = st.session_state.memory
 
 # Initialize AI model
-llm = GoogleGenerativeAI(model="gemini-1.5-pro", google_api_key=st.secrets["api_key"])
+llm = GoogleGenerativeAI(model="gemini-2.0-flash-exp", google_api_key=st.secrets["api_key"])
 
 # Sidebar - Conversation History
 st.sidebar.subheader("🕒 Conversation History")
@@ -80,4 +80,5 @@ if user_input:
 
     except Exception as e:
         st.error(f"❌ Error: {e}")
+
 
